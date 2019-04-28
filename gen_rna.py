@@ -6,8 +6,14 @@ import numpy as np
 
 if __name__ == "__main__":
 	try:
-		result = generate_weighted_rna(10, 50);
-		print (result);
+		percent = 0;
+		#loop 10 times, add 10 to percent each time
+		for i in range(0,10):
+			#loop for 100 at each percentage
+			for n in range(0,100):
+				result = generate_weighted_rna(1000, percent); #sequence length needs to be large for RFam database search, changed 10 to 1000
+				print (result);
+			percent = i*10;
 	except ValueError as e:
 		print(e)
 
