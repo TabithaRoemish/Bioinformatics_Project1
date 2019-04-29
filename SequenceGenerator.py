@@ -22,10 +22,10 @@ def weighted_random_codon(weights):
 	codons = ['G', 'C', 'T', 'A'];
 	return np.random.choice(codons, p=weights);
 
-#create file
+#create file, in fasta format
 def create_file():
     try:
-        filename = str.format("RNA_fastafile");
+        filename = str.format("RNA_fastafile.faa");
         file = open(filename, "w+");
         return file;
     except Exception as e:
