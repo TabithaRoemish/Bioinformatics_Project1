@@ -42,14 +42,14 @@ def write_file(data, file, gc_content, seq_num):
         
 if __name__=="__main__":
     try:
-        seq_size = 1000;
+        seq_size = 500;
         gc_content = 0;
         seq_num = 10;
         random.seed();
         run_num = random.randint(0, 100000000);
         #loop at 10+ intervals (0 - 100 percent)
-        for i in range(0,11):
-            gc_content = i*10;
+        for i in range(0,21):
+            gc_content = i*5;
             #loop for x sequences at each percentage
             for n in range(0,seq_num):
                 file = create_file(gc_content, n+1, run_num); # create file
